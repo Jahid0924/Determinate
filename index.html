@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="page">
+    <h1>Determinate Claculator</h1>
+    <div class="options">
+      <span>select determinate</span>
+      <select  id="userSelect" >
+        <option value="1" selected>Orders</option>
+        <option value="4">4x4</option>
+        <option value="3">3x3</option>
+      </select>
+    </div>
+      <div class="container">
+        <div class="box">
+          <span class="letter">Please select order</span>
+          <div class="determinateBox_4x4 hide">
+            <div class="rows1 group">
+              <input type="text" placeholder="a11"/>
+              <input type="text" placeholder="a12"/>
+              <input type="text" placeholder="a13"/>
+              <input type="text" placeholder="a14"/>
+            </div>
+            <div class="rows2 group">
+              <input type="text" placeholder="a21"/>
+              <input type="text" placeholder="a22"/>
+              <input type="text" placeholder="a23"/>
+              <input type="text" placeholder="a24"/>
+            </div>
+            <div class="rows3 group">
+              <input type="text" placeholder="a31"/>
+              <input type="text" placeholder="a32"/>
+              <input type="text" placeholder="a33"/>
+              <input type="text" placeholder="a34"/>
+            </div>
+            <div class="rows4 group">
+              <input type="text" placeholder="a41"/>
+              <input type="text" placeholder="a42"/>
+              <input type="text" placeholder="a43"/>
+              <input type="text" placeholder="a44"/>
+            </div>
+          </div>
+          <div class="determinateBox_3x3 hide">
+            <div class="rows1 row">
+              <input type="text" placeholder="a11"/>
+              <input type="text" placeholder="a12"/>
+              <input type="text" placeholder="a13"/>
+            </div>
+            <div class="rows2 row">
+              <input type="text" placeholder="a21"/>
+              <input type="text" placeholder="a22"/>
+              <input type="text" placeholder="a23"/>
+            </div>
+            <div class="rows3 row">
+              <input type="text" placeholder="a31"/>
+              <input type="text" placeholder="a32"/>
+              <input type="text" placeholder="a33"/>
+            </div>
+          </div>
+          <div class="result"></div>
+        </div>
+        <button class="output">Get Result</button>
+      </div>
+    </div>
+    <script src="determinate.js"></script>
+  </body>
+</html>

@@ -1,0 +1,140 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.page{
+    height: 65%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.container{
+    background-color: rgb(251, 219, 255);
+    width: 80vmin;
+    height: 45vmin;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+.box{
+    height: 70%;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+
+}
+.determinateBox_4x4{
+    margin-top: 25px;
+    background-color: rgba(162, 218, 217, 0.861);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 225px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 4px;
+    padding-bottom: 3.5px;
+    border-right: 3px solid black;
+    border-left: 3px solid black;
+    gap: 5px;
+    
+}
+.determinateBox_3x3 {
+    margin-top: 25px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 225px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-right: 3px solid black;
+    border-left: 3px solid black;
+    gap: 5px;
+}
+.result{
+    width: 80%;
+    height: auto;
+    border: 0 0 3px rgb(28, 123, 164);
+}
+input{
+    max-width: 45px;
+    height: 30px;     
+}
+select{
+    background-color: #bbe4ea;
+}
+.output{
+    border: none;
+    width: 100px;
+    height: 25px;
+    border-radius: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    background: #1C1A1C;
+    cursor: pointer;
+    transition: all 450ms ease-in-out;
+    background: linear-gradient(0deg,#A47CF3,#683FEA);
+    box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4),
+    inset 0px -4px 0px 0px rgba(0, 0, 0, 0.2),
+    0px 0px 0px 4px rgba(255, 255, 255, 0.2),
+    0px 0px 180px 0px #9917FF;
+    transform: translateY(-2px);
+}
+  
+  
+  
+  input::placeholder {
+    color: #94a3b8;
+  }
+  
+  input:focus, input:hover {
+    outline: none;
+    border-color: rgba(129, 140, 248);
+    background-color: #fff;
+    box-shadow: 0 0 0 5px rgb(129 140 248 / 30%);
+  }
+.hide{
+    opacity: 0;
+    display: none;
+}
+
+
+
+@media (max-width: 500px){
+    .container{
+        height: 70vmin;;
+    }
+    .determinateBox_4x4{
+        max-width: 200px;
+    }
+    .determinateBox_3x3{
+        max-width: 180px;
+    }
+    input{
+        max-width: 30px;
+        height: 25px;
+        text-decoration: none;
+        border-right: none;
+        border-left: none;
+        border-top: none;
+    }
+    input::placeholder{
+        font-size: 0.75rem;
+    }
+}
