@@ -14,6 +14,7 @@ select.addEventListener("change", () => {
     msg.classList.add("hide");
     btn.addEventListener("click", () => {
       let boxes = document.querySelectorAll(".determinateBox_4x4 input");
+      
 
       var elem = [
         parseFloat(boxes[0].value),
