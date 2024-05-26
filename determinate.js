@@ -12,6 +12,13 @@ select.addEventListener("change", () => {
     Determinate4x4.classList.remove("hide");
     Determinate3x3.classList.add("hide");
     msg.classList.add("hide");
+    gsap.from(".determinateBox_4x4",
+{
+  opacity:0,
+  duration:1,
+  z :19,
+  delay:0.4,
+})
     btn.addEventListener("click", () => {
       let boxes = document.querySelectorAll(".determinateBox_4x4 input");
       
@@ -159,6 +166,13 @@ select.addEventListener("change", () => {
     Determinate3x3.classList.remove("hide");
     Determinate4x4.classList.add("hide");
     msg.classList.add("hide");
+    gsap.from(".determinateBox_3x3",
+    {
+      opacity:0,
+      duration:1,
+      z :19,
+      delay:0.4,
+    })
     btn.addEventListener("click", () => {
       let box = document.querySelectorAll(".determinateBox_3x3 input");
 
@@ -197,3 +211,29 @@ select.addEventListener("change", () => {
     console.log("error");
   }
 });
+
+gsap.from("h1",{
+  opacity:0,
+  duration:0.7,
+  y:20,
+  delay:0.4
+})
+
+gsap.from(".options",
+{
+  opacity:0,
+  duration:0.9,
+  y :25,
+  delay:0.7,
+})
+gsap.from(".container",
+{
+  opacity:0,
+  duration:1,
+  y :25,
+  delay:0.9,
+})
+
+
+
+
