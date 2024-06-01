@@ -1,6 +1,32 @@
 let btn = document.querySelector(".output");
 var resultBox = document.querySelector(".result");
 let select = document.querySelector("#userSelect");
+let togglebtn = document.querySelector(".toggleswitch");
+let sun = document.querySelector(".sunbtn");
+let moon = document.querySelector(".moonbtn");
+
+let body = document.querySelector("body");
+let mode = "light";
+togglebtn.addEventListener("click", () => {
+  if (mode === "light") {
+    mode = "dark";
+    body.classList.add("darkb");
+    body.classList.remove("lightb");
+    sun.classList.add("hide");
+    moon.classList.remove("hide");
+    h1.style.color = "White";
+    document.querySelector(".options").style.color = "white";
+  } else {
+    mode = "light";
+    body.classList.add("lightb");
+    body.classList.remove("darkb");
+    sun.classList.remove("hide");
+    moon.classList.add("hide");
+    h1.style.color = "black";
+    document.querySelector(".options").style.color = "black";
+  }
+  console.log(mode);
+});
 
 select.addEventListener("change", () => {
   var selectVal = select.value;
@@ -12,16 +38,14 @@ select.addEventListener("change", () => {
     Determinate4x4.classList.remove("hide");
     Determinate3x3.classList.add("hide");
     msg.classList.add("hide");
-    gsap.from(".determinateBox_4x4",
-{
-  opacity:0,
-  duration:1,
-  z :19,
-  delay:0.4,
-})
+    gsap.from(".determinateBox_4x4", {
+      opacity: 0,
+      duration: 1,
+      z: 19,
+      delay: 0.4,
+    });
     btn.addEventListener("click", () => {
       let boxes = document.querySelectorAll(".determinateBox_4x4 input");
-      
 
       var elem = [
         parseFloat(boxes[0].value),
@@ -166,13 +190,12 @@ select.addEventListener("change", () => {
     Determinate3x3.classList.remove("hide");
     Determinate4x4.classList.add("hide");
     msg.classList.add("hide");
-    gsap.from(".determinateBox_3x3",
-    {
-      opacity:0,
-      duration:1,
-      z :19,
-      delay:0.4,
-    })
+    gsap.from(".determinateBox_3x3", {
+      opacity: 0,
+      duration: 1,
+      z: 19,
+      delay: 0.4,
+    });
     btn.addEventListener("click", () => {
       let box = document.querySelectorAll(".determinateBox_3x3 input");
 
@@ -212,28 +235,49 @@ select.addEventListener("change", () => {
   }
 });
 
-gsap.from("h1",{
-  opacity:0,
-  duration:0.7,
-  y:20,
-  delay:0.4
-})
+gsap.from(".options", {
+  opacity: 0,
+  duration: 0.9,
+  y: 25,
+  delay: 0.7,
+});
+gsap.from(".container", {
+  opacity: 0,
+  duration: 1,
+  y: 25,
+  delay: 0.9,
+});
 
-gsap.from(".options",
-{
-  opacity:0,
-  duration:0.9,
-  y :25,
-  delay:0.7,
-})
-gsap.from(".container",
-{
-  opacity:0,
-  duration:1,
-  y :25,
-  delay:0.9,
-})
+var h1 = document.querySelector("h1");
+function breakText() {
 
+  var h1txt = h1.textContent;
+  var splittext = h1txt.split("");
+  var halfvalue = splittext.length / 2;
+  var clutter = "";
 
+  splittext.forEach(function (element, index) {
+    if (index < halfvalue) {
+      clutter += `<span class="left">${element}</span>`;
+    } else {
+      clutter += `<span class="right">${element}</span>`;
+    }
+  });
+  h1.innerHTML = clutter;
+}
+breakText();
 
-
+gsap.from("h1 .left", {
+  y: 80,
+  opacity: 0,
+  duration: 0.6,
+  delay: 0.5,
+  stagger: 0.15,
+});
+gsap.from("h1 .right", {
+  y: 80,
+  opacity: 0,
+  duration: 0.6,
+  delay: 0.5,
+  stagger: -0.15,
+});

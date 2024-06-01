@@ -10,6 +10,7 @@ body{
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    
 }
 .page{
     height: 65%;
@@ -18,15 +19,23 @@ body{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    overflow: hidden;
+   
+}
+.togglebtn{
+    position: absolute;
+    top: 10px;
+    right: 30px;
 }
 .container{
-    background-color: rgb(251, 219, 255);
+    background-color: rgb(187, 120, 242);
     width: 80vmin;
     height: 45vmin;
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
+    border-radius: 5px;
 }
 .options{
     font-weight: 500;
@@ -65,7 +74,7 @@ option{
 }
 .determinateBox_3x3 {
     margin-top: 25px;
-    
+    background-color: rgba(162, 218, 217, 0.861);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -134,12 +143,155 @@ select{
     background-color: azure;
     color: #683FEA;
 }
+.output {
+  --fancy-button-gradient-0: #8d49fd;
+  --fancy-button-gradient-50: #7f56f3;
+  --fancy-button-gradient-100: #5691f3;
+  --fancy-button-inner-shadow-top: rgba(233, 209, 255, 0.2);
+  --fancy-button-inner-shadow-top-lg: rgba(9, 12, 60, 0.1);
+  --fancy-button-inner-shadow-bottom: rgba(137, 222, 246, 0.3);
+  --fancy-button-shine-top: #e9d1ff;
+  --fancy-button-shine-bottom: #adfff9;
+  font-family: 'Poppins';
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 21px;
+  text-shadow: 0px 0.5px 0.5px rgba(0, 0, 0, 0.2);
+  padding: 0;
+  margin: 0;
+  appearance: none;
+  border: none;
+  outline: none;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  z-index: 1;
+  border-radius: 25px;
+  color: #fff;
+  background-image: linear-gradient(to bottom, var(--fancy-button-gradient-0) 0%, var(--fancy-button-gradient-50) 50%, var(--fancy-button-gradient-100) 100%);
+  box-shadow: 0px 4px 12px rgba(9, 12, 60, 0.15), 0px 2px 8px rgba(9, 12, 60, 0.15), 0px 1px 3px var(--fancy-button-inner-shadow-top-lg), inset 0px 1px 1px var(--fancy-button-inner-shadow-top), inset 0px -1px 3px var(--fancy-button-inner-shadow-bottom);
+}
+
+.output:before, .output:after {
+  content: '';
+  position: absolute;
+  border-radius: inherit;
+  will-change: transform;
+}
+
+.output:before {
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--fancy-button-shine-top);
+  width: 96px;
+  height: 6px;
+  top: -3px;
+  opacity: 0.6;
+  filter: blur(6px);
+  transition: opacity 0.25s;
+}
+
+.output:after {
+  inset: 0;
+  background-size: cover;
+  z-index: 2;
+  opacity: 0.3;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+}
+
+.output span {
+  display: block;
+  padding: 1px;
+  border-radius: inherit;
+  overflow: hidden;
+  position: relative;
+  background-image: linear-gradient(to bottom, var(--fancy-button-shine-top), transparent 8px);
+  background-position: 0 -6px;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.output span:before, .output span:after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background-color: var(--fancy-button-shine-bottom);
+  transition: opacity 0.25s, transform 0.25s;
+  will-change: transform;
+}
+
+.output span:before {
+  width: 92px;
+  height: 8px;
+  bottom: -4px;
+  opacity: 0.75;
+  filter: blur(6px);
+}
+
+.output span:after {
+  width: 112px;
+  height: 1px;
+  bottom: 0;
+  opacity: 0.9;
+  filter: blur(1px);
+}
+
+.output:hover span:before {
+  opacity: 0.8;
+}
+
+.output:hover span:before {
+  transform: translateX(-50%) scale(1.25);
+}
+
+.output:hover span:after {
+  opacity: 1;
+}
 
 
+/* Default */
+/* The switch - the box around the slider */
+.toggleswitch{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 18px;
+  right: 25px;
+  width: 50px;
+  height: 40px;
+}
+.sunbtn svg{
+  height: 27px;
+  width: 27px;
+}
+.moonbtn{
+  filter: drop-shadow(0 0 5px aqua);
+  animation: Glow 1 alternate infinite;
+}
+@keyframes Glow{
+  0%{
+    filter:drop-shadow(0 0 2px aqua)
+  }
+  100%{
+    filter:drop-shadow(0 0 7px aqua)
+  }
+}
 
+  .lightb{
+    background-color: rgb(255, 255, 255);
+  }
+  .darkb{
+    background-color: #010617;
+  }
 @media (max-width: 500px){
     h1{
-        font-size: 1.85rem;
+        font-size: 1.75rem;
+        margin-left: 8px;
+        margin-right: 8px;
     }
     .container{
         height: 70vmin;;
