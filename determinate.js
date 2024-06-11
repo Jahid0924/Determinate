@@ -182,7 +182,7 @@ select.addEventListener("change", () => {
 
         var finalResult = Result1 - Result2 + Result3 - Result4;
         console.log(finalResult);
-        resultBox.innerHTML = `Value of Determinate is  '${finalResult}'`;
+        resultBox.innerHTML = `Value of Determinant is  '${finalResult}'`;
       }
       CrossBy3x();
     });
@@ -226,7 +226,7 @@ select.addEventListener("change", () => {
         let Column3 = cross2x2(elem[3], elem[4], elem[6], elem[7], elem[2]);
 
         let final3x3Result = Column1 - Column2 + Column3;
-        resultBox.innerHTML = `Value of Determinate is  '${final3x3Result}'`;
+        resultBox.innerHTML = `Value of Determinant is  '${final3x3Result}'`;
       }
       Cross3x3();
     });

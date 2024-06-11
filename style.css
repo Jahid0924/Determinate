@@ -82,6 +82,8 @@ option{
     max-width: 225px;
     padding-left: 5px;
     padding-right: 5px;
+    padding-top: 4px;
+    padding-bottom: 3.5px;
     border-right: 3px solid black;
     border-left: 3px solid black;
     gap: 5px;
@@ -116,6 +118,9 @@ select{
     0px 0px 0px 4px rgba(255, 255, 255, 0.2),
     0px 0px 180px 0px #9917FF;
     transform: translateY(-2px);
+}
+.result{
+  font-weight: 500;
 }
   
   
@@ -277,7 +282,7 @@ select{
     filter:drop-shadow(0 0 2px aqua)
   }
   100%{
-    filter:drop-shadow(0 0 7px aqua)
+    filter:drop-shadow(0 0 9px aqua)
   }
 }
 
