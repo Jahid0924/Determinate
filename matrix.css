@@ -1,0 +1,318 @@
+*{
+  font-family: "Quicksand", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  height: 150vh;
+  justify-content: flex-start;
+   flex-direction: column; 
+  align-items: center; 
+}
+.page {
+  height: 60%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+.page2{
+  width: 100%;
+  height: 54%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  /* position: absolute;
+  top: 60%; */
+}
+h1{
+  color: black;
+}
+.heading{
+  position: relative;
+  top: 55px;
+}
+.cofbox{
+  width: 80%;
+  height: 35vmin;
+  /* background-color: #ad5389; */
+  border: 2px dotted black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3px;
+}
+.cofrow{
+  margin-right: 2px;
+  margin-left: 2px;
+  height: 33%;
+  width: 100%;
+  margin: 3px;
+  display: flex;
+  justify-content: space-between;
+}
+p{
+  text-decoration: underline;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+:focus {
+  outline: 0;
+  border-color: #2260ff;
+  box-shadow: 0 0 0 4px #b5c9fc;
+}
+
+.mydict div {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+  justify-content: center;
+}
+
+.mydict input[type="radio"] {
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.mydict input[type="radio"]:checked + span {
+  box-shadow: 0 0 0 0.0625em #0043ed;
+  background-color: #dee7ff;
+  z-index: 1;
+  color: #0043ed;
+}
+
+label span {
+  display: block;
+  cursor: pointer;
+  background-color: #fff;
+  padding: 0.375em .75em;
+  position: relative;
+  margin-left: .0625em;
+  box-shadow: 0 0 0 0.0625em #b5bfd9;
+  letter-spacing: .05em;
+  color: #3e4963;
+  text-align: center;
+  transition: background-color .5s ease;
+}
+
+label:first-child span {
+  border-radius: .375em 0 0 .375em;
+}
+
+label:last-child span {
+  border-radius: 0 .375em .375em 0;
+}
+
+
+a{
+  text-decoration: none;
+  font-weight: 700;
+}
+.togglebtn {
+  position: absolute;
+  top: 10px;
+  right: 30px;
+}
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(187, 120, 242);
+  width: 84vmin;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 5px;
+}
+
+
+.matrix_3x3 {
+  margin-top: 18px;
+  margin-bottom: 22px;
+  background-color: rgba(162, 218, 217, 0.861);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 255px;
+  height: 140px;
+  padding-left: 7px;
+  padding-right: 7px;
+  padding-top: 8px;
+  border-radius: 19%;
+  border-right: 3px solid black;
+  border-left: 3px solid black;
+  gap: 4px;
+  /* margin-left: 9px; */
+}
+.row {
+  gap: 2px;
+}
+.rows1 {
+  margin-top: 9px;
+  display: flex;
+}
+.rows2 {
+  display: flex;
+}
+.rows3 {
+  display: flex;
+}
+.matrixbox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.resultbox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.resultmatrix_3x3{
+  margin-top: 15px;
+  margin-bottom: 10px;
+  background-color: rgba(162, 218, 217, 0.861);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 275px;
+  height: 135px;
+  padding-left: 7px;
+  padding-right: 7px;
+  padding-top: 8px;
+  border-radius: 19%;
+  border-right: 3px solid black;
+  border-left: 3px solid black;
+  gap: 3px;
+  margin-right: 10px;
+}
+.equal{
+  margin-right: 8px;
+}
+
+input {
+  height: 30px;
+  max-width: 45px;
+}
+.inputs {
+  background-color: white;
+  border: 1px solid;
+  height: 34px;
+  width: 51px;
+  font-size: 12px;
+  text-align: center;
+}
+input::placeholder {
+  color: #94a3b8;
+}
+
+input:focus,
+input:hover {
+  outline: none;
+  border-color: rgba(129, 140, 248);
+  background-color: #fff;
+  box-shadow: 0 0 0 5px rgb(129 140 248 / 30%);
+}
+.toggleswitch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 18px;
+  right: 25px;
+  width: 50px;
+  height: 40px;
+}
+.sunbtn svg {
+  height: 27px;
+  width: 27px;
+}
+.moonbtn {
+  filter: drop-shadow(0 0 5px aqua);
+  animation: Glow 1 alternate infinite;
+}
+.cssbuttons-io-button {
+  display: flex;
+  align-items: center;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 1rem;
+  /* padding: 0.8em 1.5em 0.8em 1.2em; */
+  padding: 7px;
+  color: white;
+  background: #ad5389;
+  background: linear-gradient(0deg, rgba(77,54,208,1) 0%, rgba(132,116,254,1) 100%);
+  border: none;
+  box-shadow: 0 0.7em 1.5em -0.5em #4d36d0be;
+  letter-spacing: 0.05em;
+  border-radius: 20em;
+  margin-bottom: 20px;
+}
+
+
+.cssbuttons-io-button:hover {
+  box-shadow: 0 0.5em 1.5em -0.5em #4d36d0be;
+}
+
+.cssbuttons-io-button:active {
+  box-shadow: 0 0.3em 1em -0.5em #4d36d0be;
+}
+@keyframes Glow {
+  0% {
+    filter: drop-shadow(0 0 2px aqua);
+  }
+  100% {
+    filter: drop-shadow(0 0 9px aqua);
+  }
+}
+
+.lightb {
+  background-color: rgb(255, 255, 255);
+}
+.darkb {
+  background-color: #010617;
+}
+.hide {
+  opacity: 0;
+  display: none;
+}
+@media (max-width: 500px){
+  h1{
+      font-size: 1.75rem;
+      margin-left: 8px;
+      margin-right: 8px;
+  }
+  .container{
+      height: auto;
+  }
+  .inputs{
+    font-size: 10px;
+    height: 30px;
+  width: 42px;
+  }
+  input{
+      max-width: 40px;
+      height: 30px;
+      text-decoration: none;
+      border-right: none;
+      border-left: none;
+      border-top: none;
+  }
+  input::placeholder{
+      font-size: 0.75rem;
+  }
+}
